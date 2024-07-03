@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="flex2">
+        <h1>Your Cart</h1>
+    </div>
+    <div class="menu-container">
+        {% if cart_items %}
+            {% for item in cart_items %}
+                <div class="menu-card">
+                    <h2>{{ item.menu_item.name }}</h2>
+                    <p>{{ item.menu_item.description }}</p>
+                    <p><strong>Price:</strong> ${{ item.menu_item.price }}</p>
+                    <p><strong>Quantity:</strong> {{ item.quantity }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Your cart is empty.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
