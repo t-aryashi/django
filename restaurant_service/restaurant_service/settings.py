@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-1geo&$mfwd@5^!azpmcquipbchg3(-2og11ys^v$^2_w4_g$6h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['t-aryashi.github.io', 'www.t-aryashi.github.io']
 
 
 # Application definition
